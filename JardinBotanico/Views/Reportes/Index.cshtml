@@ -1,0 +1,41 @@
+﻿@model IQueryable<Planta>
+
+<h1 class="mb-4">Reportes</h1>
+<form asp-action="Index">
+    <div class="row">
+        <div class="col-md-3">
+            <label>Busqueda</label>
+            <input name="filtro" class="form-control" placeholder="" value="@ViewBag.filtro" />
+        </div>
+       
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-secondary mt-4">Filtrar</button>
+        </div>
+    </div>
+</form>
+<table class="table table-striped mt-4">
+    <tr>
+        
+        <th>Planta</th>
+        <th>Jardinero</th>
+        <th>Centro</th>
+        <th>Ciudad</th>
+        
+    </tr>
+
+    @foreach (var planta in Model)
+    {
+        <tr>
+            
+            <td>
+                <a asp-controller="Plantas" asp-action="Details" asp-route-id="@planta.Id">@planta.NombreComun </a>
+            </td>
+            <td>
+                <a asp-controller="Jardineros" asp-action="Details" asp-route-id="@planta.Jardinero?.Id">@planta.Jardinero?.Nombre </a>
+            </td>
+            <td>@planta.Jardinero?.Centro?.NombreCentro</td>
+            
+            <td>@planta.Jardinero?.Centro?.Ciudad</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,30 @@
+﻿@model Planta
+<dl class="row">
+    <div class="col-md-4">
+    <dt >
+        @Html.DisplayNameFor(model => model.NombreCientifico)
+    </dt>
+    <dd >
+        @Html.DisplayFor(model => model.NombreCientifico)
+    </dd>
+    </div>
+
+    <div class="col-md-4">
+    <dt >
+        @Html.DisplayNameFor(model => model.NombreComun)
+    </dt>
+    <dd >
+        @Html.DisplayFor(model => model.NombreComun)
+    </dd>
+    </div>
+
+    <div class="col-md-4">
+    <dt >
+        @Html.DisplayNameFor(model => model.Jardinero)
+    </dt>
+    <dd >
+        @Html.DisplayFor(model => model.Jardinero.Nombre)
+    </dd>
+    </div>
+</dl>
+

@@ -1,0 +1,17 @@
+﻿@model Jardinero
+<div class="row">
+<div class="form-group col-md-4">
+    <label asp-for="Nombre" class="control-label"></label>
+    <input asp-for="Nombre" class="form-control" />
+    <span asp-validation-for="Nombre" class="text-danger"></span>
+</div>
+<div class="form-group col-md-4">
+    <label asp-for="Apellido" class="control-label"></label>
+    <input asp-for="Apellido" class="form-control" />
+    <span asp-validation-for="Apellido" class="text-danger"></span>
+</div>
+<div class="form-group col-md-4">
+    <label asp-for="CentroId" class="control-label"></label>
+    <select asp-for="CentroId" class="form-control" asp-items="ViewBag.CentroId"></select>
+</div>
+</div>

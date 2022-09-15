@@ -1,0 +1,29 @@
+﻿@model Jardinero
+<dl class="row">
+    <div class="col-md-4">
+    <dt >
+        @Html.DisplayNameFor(model => model.Nombre)
+    </dt>
+    <dd >
+        @Html.DisplayFor(model => model.Nombre)
+    </dd>
+    </div>
+    <div class="col-md-4">
+    <dt >
+        @Html.DisplayNameFor(model => model.Apellido)
+    </dt>
+    <dd >
+        @Html.DisplayFor(model => model.Apellido)
+    </dd>
+    </div>
+    <div class="col-md-4">
+    <dt >
+        @Html.DisplayNameFor(model => model.Centro)
+    </dt>
+    <dd >
+        @Html.DisplayFor(model => model.Centro.NombreCentro)
+    </dd>
+    </div>
+</dl>
+
+

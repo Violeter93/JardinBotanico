@@ -1,0 +1,17 @@
+﻿@model JardinBotanico.Models.Centro
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Centro</h4>
+    <hr />
+    @Html.DisplayForModel()
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Regresar</a>
+</div>
